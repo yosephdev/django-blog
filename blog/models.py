@@ -11,3 +11,4 @@ class Post(models.Model):
     User, on_delete=models.CASCADE, related_name="blog_posts")
     content = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
+    STATUS = ((0, "Draft"), (1, "Published"))
