@@ -14,5 +14,5 @@ COPY . /app
 WORKDIR /app
 
 RUN pip install --no-cache-dir psycopg2-binary
-RUN pip install django dj_database_url
+RUN pip install django dj_database_url django_summernote
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
