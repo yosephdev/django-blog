@@ -112,7 +112,6 @@ tornado==6.4
 traitlets==5.14.3
 typing_extensions==4.11.0
 tzdata==2023.4
-ubuntu-drivers-common==0.0.0
 ufw==0.36.1
 unattended-upgrades==0.1
 uritemplate==4.1.1
