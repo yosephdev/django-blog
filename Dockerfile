@@ -10,5 +10,8 @@ RUN apt-get update && apt-get install -y \
     python3-dev \
     libpq-dev
 
-COPY requirements.txt .
-RUN pip install --no-cache-dir psycopg2-binary
+COPY . /app
+WORKDIR /app
+
+RUN pip install --no-cache-dir -r requirements.txt
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
