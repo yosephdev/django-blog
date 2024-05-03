@@ -50,27 +50,27 @@
     {% if is_paginated %}
     <nav aria-label="Page navigation" class="d-flex justify-content-center mt-4">
         <ul class="pagination">
-            {% if page_obj.has_previous %}
-            <li class="page-item">
-                <a class="page-link" href="?page={{ page_obj.previous_page_number }}" aria-label="Previous">
+            <li class="page-item {% if not page_obj.has_previous %}disabled{% endif %}">
+                <a class="page-link"
+                    href="?page={% if page_obj.has_previous %}{{ page_obj.previous_page_number }}{% else %}1{% endif %}"
+                    aria-label="Previous">
                     <span aria-hidden="true">&laquo;</span>
                 </a>
             </li>
-            {% endif %}
 
-            {% for i in paginator.page_range %}
-            <li class="page-item {% if page_obj.number == i %}active{% endif %}">
-                <a class="page-link" href="?page={{ i }}">{{ i }}</a>
+            {% for page_number in page_obj.paginator.page_range %}
+            <li class="page-item {% if page_number == page_obj.number %}active{% endif %}">
+                <a class="page-link" href="?page={{ page_number }}">{{ page_number }}</a>
             </li>
             {% endfor %}
 
-            {% if page_obj.has_next %}
-            <li class="page-item">
-                <a class="page-link" href="?page={{ page_obj.next_page_number }}" aria-label="Next">
+            <li class="page-item {% if not page_obj.has_next %}disabled{% endif %}">
+                <a class="page-link"
+                    href="?page={% if page_obj.has_next %}{{ page_obj.next_page_number }}{% else %}{{ page_obj.paginator.num_pages }}{% endif %}"
+                    aria-label="Next">
                     <span aria-hidden="true">&raquo;</span>
                 </a>
             </li>
-            {% endif %}
         </ul>
     </nav>
     {% endif %}
