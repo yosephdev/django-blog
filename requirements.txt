@@ -121,3 +121,6 @@ Werkzeug==3.0.1
 whitenoise==5.3.0
 yarg==0.1.9
 zipp==1.0.0
+libgirepository1.0-dev
+dbus-1
+gobject-introspection-1.0
