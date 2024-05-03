@@ -14,5 +14,6 @@ COPY . /app
 WORKDIR /app
 
 RUN pip install --no-cache-dir psycopg2-binary
-RUN pip install django dj_database_url django_summernote whitenoise
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+RUN pip install django dj_database_url django_summernote whitenoise gunicorn
+CMD ["gunicorn", "--bind", "0.0.0.0:8000", "codestar.wsgi:application"]
+
