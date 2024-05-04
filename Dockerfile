@@ -1,4 +1,4 @@
-FROM python:3.10-slim-buster
+FROM heroku/python
 
 # Install required build dependencies
 RUN apt-get update && apt-get install -y \
