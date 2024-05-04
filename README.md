@@ -1,10 +1,10 @@
 ![Responsive Design](#)
 
-[View the deployed site on Heroku](#)
+[View the deployed site on Heroku](https://code-ninja-6985a427438a.herokuapp.com/)
 
 # Project Name
 
-Description of your project goes here.
+CodeStar
 
 ## Table Of Contents:
 
@@ -75,36 +75,42 @@ User Story 9: **As a Site User,**
 
 ## Project Overview
 
-Brief overview of the project.
+This project is a full-featured Django blog application designed to showcase various aspects of web development, including database-backed projects, deployment to Heroku, hosting uploaded images on a Cloud provider, creating function-based views, utilizing Django generic views, adding authentication, creating custom models, and adding interactivity using JavaScript. The principles and mechanics of Django design learned throughout this project can be applied to other projects as well.
 
 ## Features
 
-List of features the project offers.
+- Create a database-backed Django project and deploy it to Heroku.
+- Host uploaded images on a Cloud provider.
+- Create function-based views in a Django project.
+- Utilize Django generic views.
+- Add authentication.
+- Create custom models.
+- Add interactivity using JavaScript.
 
 ## Technologies Used
 
-List of technologies used in the project.
+- Django
+- Heroku
+- ElephantSQL
+- Cloudinary
 
 ## Setup and Installation
 
-Instructions on how to set up and install the project locally.
+Instructions on how to set up and install the project locally will be provided in the project documentation.
 
 ## Usage
 
-Instructions on how to use the project once it's set up.
+Instructions on how to use the project once it's set up will be provided in the project documentation.
 
 ## Testing
 
-Information about testing procedures and tools used.
+Information about testing procedures and tools used will be provided in the project documentation.
 
 ## Deployment
 
-Instructions on how to deploy the project.
-
-## Contributing
-
-Guidelines on how to contribute to the project.
+Instructions on how to deploy the project to Heroku and other relevant platforms will be provided in the project documentation.
 
 ## Credits
 
-Acknowledgments and credits to contributors or resources used.
+Acknowledgments and credits to contributors or resources used.  
+- Niel McEwen
