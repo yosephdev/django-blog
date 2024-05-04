@@ -36,7 +36,7 @@ ALLOWED_HOSTS = [
     "127.0.0.1",
     "8000-yosephdev-djangoblog-dze6izeu23k.ws-eu110.gitpod.io",
     ".herokuapp.com",
-    "localhost:8001",
+    "http://127.0.0.1:8001/",
 ]
 
 
