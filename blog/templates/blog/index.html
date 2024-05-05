@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block content %}
 
 <!-- index.html content starts here -->
@@ -7,77 +7,74 @@
     <div class="row">
 
         <!-- Blog Entries Column -->
-        <div class="col-12">
-            <div class="row g-4">
+        <div class="col-12 mt-3 left">
+            <div class="row">
                 {% for post in post_list %}
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="card h-100">
+                <div class="col-md-4">
+                    <div class="card mb-4">
                         <!-- Image Container -->
-                        <div class="image-container">
-                            <img src="#" class="card-img-top" alt="{{ post.title }}">
-                            <div class="image-flash position-absolute top-0 end-0 px-3 py-2">
-                                AUTHOR: {{ post.author }}
+                        <div class="card image-container">
+                            <img src="{% static 'images/nobody.jpg' %}" class="card-img scale" alt="#">
+                            <div class="image-flash position-absolute bottom-0 start-0 px-3 py-2">
+                                <span class="author">AUTHOR: {{ post.author }}</span>
                             </div>
                         </div>
 
                         <!-- Card Body -->
-                        <div class="card-body d-flex flex-column">
+                        <div class="card-body">
                             <!-- Post Details -->
-                            <div>
-                                <a href="{% url 'post_detail' post.slug %}" class="post-link text-decoration-none">
-                                    <h2 class="card-title">{{ post.title }}</h2>
-                                </a>
+                            <a href="{% url 'post_detail' post.slug %}" class="post-link text-decoration-none">
+                                <h2 class="card-title">{{ post.title }}</h2>
                                 <p class="card-text text-muted">{{ post.excerpt }}</p>
-                            </div>
+                            </a>
 
-                            <hr class="my-3">
+                            <hr />
 
                             <!-- Post Creation Date -->
-                            <div class="mt-auto">
-                                <p class="card-text">
-                                    <small class="text-muted h6">{{ post.created_on }}</small>
-                                </p>
-                            </div>
+                            <p class="card-text text-muted h6">{{ post.created_on }}</p>
                         </div>
                     </div>
                 </div>
+                {% if forloop.counter|divisibleby:3 %}
+            </div>
+            <div class="row">
+                {% endif %}
                 {% endfor %}
-
             </div>
         </div>
+
+
+        {% if is_paginated %}
+        <nav aria-label="Page navigation" class="d-flex justify-content-center mt-4">
+            <ul class="pagination">
+                <li class="page-item {% if not page_obj.has_previous %}disabled{% endif %}">
+                    <a class="page-link"
+                        href="?page={% if page_obj.has_previous %}{{ page_obj.previous_page_number }}{% else %}1{% endif %}"
+                        aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+
+                {% for page_number in page_obj.paginator.page_range %}
+                <li class="page-item {% if page_number == page_obj.number %}active{% endif %}">
+                    <a class="page-link" href="?page={{ page_number }}">{{ page_number }}</a>
+                </li>
+                {% endfor %}
+
+                <li class="page-item {% if not page_obj.has_next %}disabled{% endif %}">
+                    <a class="page-link"
+                        href="?page={% if page_obj.has_next %}{{ page_obj.next_page_number }}{% else %}{{ page_obj.paginator.num_pages }}{% endif %}"
+                        aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        {% endif %}
     </div>
 
-    {% if is_paginated %}
-    <nav aria-label="Page navigation" class="d-flex justify-content-center mt-4">
-        <ul class="pagination">
-            <li class="page-item {% if not page_obj.has_previous %}disabled{% endif %}">
-                <a class="page-link"
-                    href="?page={% if page_obj.has_previous %}{{ page_obj.previous_page_number }}{% else %}1{% endif %}"
-                    aria-label="Previous">
-                    <span aria-hidden="true">&laquo;</span>
-                </a>
-            </li>
-
-            {% for page_number in page_obj.paginator.page_range %}
-            <li class="page-item {% if page_number == page_obj.number %}active{% endif %}">
-                <a class="page-link" href="?page={{ page_number }}">{{ page_number }}</a>
-            </li>
-            {% endfor %}
-
-            <li class="page-item {% if not page_obj.has_next %}disabled{% endif %}">
-                <a class="page-link"
-                    href="?page={% if page_obj.has_next %}{{ page_obj.next_page_number }}{% else %}{{ page_obj.paginator.num_pages }}{% endif %}"
-                    aria-label="Next">
-                    <span aria-hidden="true">&raquo;</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-    {% endif %}
-</div>
-
-<!-- index.html content ends here -->
-{% endblock %}
-{% block copyright %}
-Copyright 2024 Yoseph Berhane
-{% endblock %}
+    <!-- index.html content ends here -->
+    {% endblock %}
+    {% block copyright %}
+    Copyright 2024 Yoseph Berhane
+    {% endblock %}
