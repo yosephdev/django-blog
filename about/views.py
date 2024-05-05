@@ -8,7 +8,7 @@ def about_me(request):
     Renders the About page
     """
 
-    about = About.objects.all().order_by("-created_on").first()
+    about = About.objects.all().order_by("-updated_on").first()
 
     return render(
         request,
