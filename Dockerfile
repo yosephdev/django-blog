@@ -16,7 +16,7 @@ COPY . /app
 WORKDIR /app
 
 RUN pip install --no-cache-dir psycopg2-binary
-RUN pip install django dj_database_url django_summernote whitenoise gunicorn
+RUN pip install django dj_database_url django_summernote whitenoise gunicorn django-allauth
 
 CMD gunicorn --bind 0.0.0.0:$PORT codestar.wsgi:application
 
