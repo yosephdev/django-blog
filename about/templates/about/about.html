@@ -21,5 +21,29 @@
             <p class="text-end"><em>Updated on: {{ about.updated_on }}</em></p>
         </div>
     </div>
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-6 my-5">
+            <div class="card border-0 shadow-lg">
+                <div class="card-body">
+                    <h2 class="card-title text-center">Let's Collaborate!</h2>
+                    <p class="card-text">
+                        I believe in the power of shared knowledge and collective effort.
+                        Whether you have a project in mind, wish to co-author an article,
+                        or simply want to brainstorm some ideas, I'm excited to hear from you.
+                        Fill out the form below and let's get the ball rolling!
+                    </p>
+                    <form method="post">
+                        {{ collaborate_form | crispy }}
+                        {% csrf_token %}
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-secondary" type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 </div>
 {% endblock content %}
