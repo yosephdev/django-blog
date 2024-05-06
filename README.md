@@ -114,3 +114,4 @@ Instructions on how to deploy the project to Heroku and other relevant platforms
 
 Acknowledgments and credits to contributors or resources used.  
 - Niel McEwen
+- Matt Rudge
