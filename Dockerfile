@@ -15,8 +15,6 @@ RUN apt-get update && apt-get install -y \
 COPY . /app
 WORKDIR /app
 
-RUN pip install --no-cache-dir psycopg2-binary
-RUN pip install django dj_database_url django_summernote whitenoise gunicorn django-allauth
+RUN pip install --no-cache-dir -r requirements.txt
 
 CMD gunicorn --bind 0.0.0.0:$PORT codestar.wsgi:application
-
