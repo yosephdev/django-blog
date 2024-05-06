@@ -57,3 +57,4 @@ ipython_config.py
 migrations/
 
 blog/fixtures
+.vscode/settings.json
