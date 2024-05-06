@@ -31,6 +31,8 @@ def post_detail(request, slug):
     comments = post.comments.all().order_by("-created_on")
     comment_count = post.comments.filter(approved=True).count()
 
+    comment_form = CommentForm()
+
     return render(
         request,
         "blog/post_detail.html",
