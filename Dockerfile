@@ -10,7 +10,8 @@ RUN apt-get update && apt-get install -y \
     python3-dev \
     libpq-dev \
     dbus \
-    gir1.2-glib-2.0
+    gir1.2-glib-2.0 \
+    libsystemd-dev
 
 COPY . /app
 WORKDIR /app
