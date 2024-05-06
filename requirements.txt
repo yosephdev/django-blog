@@ -13,6 +13,7 @@ click==8.1.7
 colorama==0.4.4
 command-not-found==0.3
 contourpy==1.2.0
+crispy-bootstrap5~=0.7
 cryptography==3.4.8
 cycler==0.12.1
 dbus-python==1.2.18
@@ -23,6 +24,7 @@ distro-info===1.1build1
 dj-database-url==0.5.0
 Django==4.2.11
 django-allauth==0.57.2
+django-crispy-forms~=2.0
 django-crontab==0.7.1
 django-summernote==0.8.20.0
 dnspython==2.5.0
