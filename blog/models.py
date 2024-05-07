@@ -37,17 +37,14 @@ class Comment(models.Model):
     and :model:`blog.Post`.
     """
 
+    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name="comments")
+    body = models.TextField()
+    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="commenter")
+    approved = models.BooleanField(default=False)
+    created_on = models.DateTimeField(auto_now_add=True)
 
-post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name="comments")
-body = models.TextField()
-author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="commenter")
-approved = models.BooleanField(default=False)
-created_on = models.DateTimeField(auto_now_add=True)
+    class Meta:
+        ordering = ["created_on"]
 
-
-class Meta:
-    ordering = ["created_on"]
-
-
-def __str__(self):
-    return f"Comment by {self.author} on {self.body}"
+    def __str__(self):
+        return f"Comment by {self.author} on {self.body}"
