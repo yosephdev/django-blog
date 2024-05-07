@@ -14,7 +14,11 @@
                     <div class="card mb-4">
                         <!-- Image Container -->
                         <div class="card image-container">
-                            <img src="{% static 'images/nielmac.jpg' %}" class="card-img scale" alt="#">
+                            {% if "placeholder" in post.featured_image.url %}
+                            <img class="card-img-top" src="{% static 'images/default.jpg' %}" alt="placeholder image">
+                            {% else %}
+                            <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="{{ post.title }}">
+                            {% endif %}
                             <div class="image-flash position-absolute bottom-0 start-0 px-3 py-2">
                                 <span class="author">AUTHOR: {{ post.author }}</span>
                             </div>
