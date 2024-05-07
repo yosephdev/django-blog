@@ -30,59 +30,86 @@ User Story 1: **As a Site User,**
 
 User Story 2: **As a Site User / Admin,**  
 **I can view comments on an individual post so that I can read the conversation.**  
+
 > **AC1:** Given one or more user comments, the admin can view them.  
+
 > **AC2:** Then a site user can click on the comment thread to read the conversation.
 
 User Story 3: **As a Site User,**  
 **I can register an account so that I can comment on a post.**  
-> **AC1:** Given an email, a user can register an account.  
+
+> **AC1:** Given an email, a user can register an account.
+
 > **AC2:** Then the user can log in.  
+
 > **AC3:** When the user is logged in, they can comment.
 
 User Story 4: **As a Site User,**  
 **I can leave comments on a post so that I can be involved in the conversation.**  
+
 > **AC1:** When a user comment is approved.  
+
 > **AC2:** Then a user can reply.  
+
 > **AC3:** Given more than one comment, there is a conversation thread.
 
 User Story 5: **As a Site User,**  
 **I can modify or delete my comment on a post so that I can be involved in the conversation.**  
+
 > **AC1:** Given a logged-in user, they can modify their comment.  
+
 > **AC2:** Given a logged-in user, they can delete their comment.
 
 User Story 6: **As a Site Admin,**  
 **I can create, read, update, and delete posts so that I can manage my blog content.**  
+
 > **AC1:** Given a logged-in user, they can create a blog post.  
-> **AC2:** Given a logged-in user, they can read a blog post.  
+
+> **AC2:** Given a logged-in user, they can read a blog post. 
+
 > **AC3:** Given a logged-in user, they can update a blog post.  
+
 > **AC4:** Given a logged-in user, they can delete a blog post.
 
 User Story 7: **As a Site Admin,**  
 **I can create draft posts so that I can finish writing the content later.**  
+
 > **AC1:** Given a logged-in user, they can save a draft blog post.  
+
 > **AC2:** Then they can finish the content at a later time.
 
 User Story 8: **As a Site Admin,**  
 **I can approve or disapprove comments so that I can filter out objectionable comments.**  
+
 > **AC1:** Given a logged-in user, they can approve a comment.  
+
 > **AC2:** Given a logged-in user, they can disapprove a comment.
 
 User Story 9: **As a Site User,**  
 **I can view a paginated list of posts so that I can select which post I want to view.**  
+
 > **AC1:** Given more than one post in the database, these multiple posts are listed.  
+
 > **AC2:** When a user opens the main page, a list of posts is seen.  
+
 > **AC3:** Then the user sees all post titles with pagination to choose what to read.
 
 User Story 10: **As a Potential Collaborator,**  
 **I can fill in a contact form so that I can submit a request for collaboration.**  
+
 > **AC1:** The contact form includes fields for name, email, and message. 
+
 > **AC2:** Upon submission of the form, the data is saved as a collaboration request.
+
 > **AC3:** After submitting the form, a confirmation message is displayed to the user.
 
 User Story 11: **As a Site Admin,**  
 **I can store collaboration requests in the database so that I can review them.**  
+
 > **AC1:** Collaboration requests are stored in the database upon submission.  
+
 > **AC2:** The admin can mark collaboration requests as "read" after reviewing them.
+
 > **AC3:** There is a visible indicator or counter for unread collaboration requests in the admin interface.
 
 ## Project Overview
