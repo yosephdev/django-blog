@@ -7,6 +7,6 @@ class TestCollaborateForm(TestCase):
     def test_form_is_valid(self):
         """Test for all fields"""
         form = CollaborateForm(
-            {"name": "", "email": "test@test.com", "message": "Hello!"}
+            {"name": "john", "email": "test@test.com", "message": "Hello!"}
         )
-        self.assertFalse(form.is_valid(), msg="Form is not valid")
+        self.assertTrue(form.is_valid(), msg="Form is not valid")
