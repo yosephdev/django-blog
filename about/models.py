@@ -4,6 +4,10 @@ from cloudinary.models import CloudinaryField
 
 # Create your models here.
 class About(models.Model):
+    """
+    Stores a single about me text
+    """
+
     title = models.CharField(max_length=100)
     content = models.TextField()
     profile_image = CloudinaryField("image", default="placeholder")
@@ -14,6 +18,10 @@ class About(models.Model):
 
 
 class CollaborateRequest(models.Model):
+    """
+    Stores a single collaboration request message
+    """
+
     name = models.CharField(max_length=200)
     email = models.EmailField()
     message = models.TextField()
