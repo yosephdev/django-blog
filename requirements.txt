@@ -128,4 +128,3 @@ yarg==0.1.9
 zipp==1.0.0
 cloudinary==1.36.0
 dj3-cloudinary-storage==0.0.6
-urllib3==1.26.18
