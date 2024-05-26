@@ -1,4 +1,4 @@
-![Responsive Design](#)
+![Responsive Design](static/images/responsive-design.png)
 
 [View the deployed site on Heroku](https://code-ninja-6985a427438a.herokuapp.com/)
 
