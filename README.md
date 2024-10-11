@@ -1,12 +1,15 @@
-![Responsive Design](#)
 
-[View the deployed site on Heroku](https://code-ninja-6985a427438a.herokuapp.com/)
+# CodeStar Django Blog
 
-# Project Name
+![Desktop Overview](mockup-codestar.png)
 
-CodeStar Django Blog
+Welcome to CodeStar, a full-featured Django blog application designed to showcase various aspects of web development, including database-backed projects, deployment to Heroku, hosting uploaded images on a Cloud provider, creating function-based views, utilizing Django generic views, adding authentication, creating custom models, and adding interactivity using JavaScript.
 
-## Table Of Contents:
+[Live link to CodeStar](https://code-ninja-6985a427438a.herokuapp.com/)
+
+<br>
+
+## Table Of Contents
 
 1. [Design & Planning](#design--planning)
     * [User Stories](#user-stories)  
@@ -19,6 +22,8 @@ CodeStar Django Blog
 8. [Deployment](#deployment)
 9. [Contributing](#contributing)
 10. [Credits](#credits)
+
+<br>
 
 ## Design & Planning
 
@@ -65,7 +70,7 @@ User Story 6: **As a Site Admin,**
 
 > **AC1:** Given a logged-in user, they can create a blog post.  
 
-> **AC2:** Given a logged-in user, they can read a blog post. 
+> **AC2:** Given a logged-in user, they can read a blog post.
 
 > **AC3:** Given a logged-in user, they can update a blog post.  
 
@@ -97,7 +102,7 @@ User Story 9: **As a Site User,**
 User Story 10: **As a Potential Collaborator,**  
 **I can fill in a contact form so that I can submit a request for collaboration.**  
 
-> **AC1:** The contact form includes fields for name, email, and message. 
+> **AC1:** The contact form includes fields for name, email, and message.
 
 > **AC2:** Upon submission of the form, the data is saved as a collaboration request.
 
@@ -112,135 +117,154 @@ User Story 11: **As a Site Admin,**
 
 > **AC3:** There is a visible indicator or counter for unread collaboration requests in the admin interface.
 
+<br>
+
 ## Project Overview
 
 This project is a full-featured Django blog application designed to showcase various aspects of web development, including database-backed projects, deployment to Heroku, hosting uploaded images on a Cloud provider, creating function-based views, utilizing Django generic views, adding authentication, creating custom models, and adding interactivity using JavaScript. The principles and mechanics of Django design learned throughout this project can be applied to other projects as well.
 
+<br>
+
 ## Features
 
-- Create a database-backed Django project and deploy it to Heroku.
-- Host uploaded images on a Cloud provider.
-- Create function-based views in a Django project.
-- Utilize Django generic views.
-- Add authentication.
-- Create custom models.
-- Add interactivity using JavaScript.
+* Create a database-backed Django project and deploy it to Heroku.
+* Host uploaded images on a Cloud provider.
+* Create function-based views in a Django project.
+* Utilize Django generic views.
+* Add authentication.
+* Create custom models.
+* Add interactivity using JavaScript.
+
+<br>
 
 ## Technologies Used
 
-- Django
-- Heroku
-- ElephantSQL
-- Cloudinary
+* Django
+* Heroku
+* ElephantSQL
+* Cloudinary
+
+<br>
 
 ## Setup and Installation
 
 To set up and install the project locally, follow these steps:
 
 1. **Clone the Repository:**
-   - Clone the project repository from GitHub to your local machine using the following command:
+   * Clone the project repository from GitHub to your local machine using the following command:
+
      ```
      git clone <repository_url>
      ```
 
 2. **Navigate to the Project Directory:**
-   - Change directory to the cloned project folder:
+   * Change directory to the cloned project folder:
+
      ```
      cd <project_folder_name>
      ```
 
 3. **Create a Virtual Environment:**
-   - Set up a virtual environment for the project to isolate dependencies:
+   * Set up a virtual environment for the project to isolate dependencies:
+
      ```
      python -m venv venv
      ```
 
 4. **Activate the Virtual Environment:**
-   - Activate the virtual environment based on your operating system:
-     - **Windows:**
+   * Activate the virtual environment based on your operating system:
+     * **Windows:**
+
        ```
        venv\Scripts\activate
        ```
-     - **macOS/Linux:**
+
+     * **macOS/Linux:**
+
        ```
        source venv/bin/activate
        ```
 
 5. **Install Dependencies:**
-   - Install the required dependencies for the project using pip:
+   * Install the required dependencies for the project using pip:
+
      ```
      pip install -r requirements.txt
      ```
 
 6. **Set Up Database:**
-   - Create a PostgreSQL database for the project and configure the database settings in the `settings.py` file accordingly.
+   * Create a PostgreSQL database for the project and configure the database settings in the `settings.py` file accordingly.
 
 7. **Run Migrations:**
-   - Apply database migrations to create the necessary database tables:
+   * Apply database migrations to create the necessary database tables:
+
      ```
      python manage.py migrate
      ```
 
 8. **Create Superuser (Optional):**
-   - Optionally, create a superuser account to access the Django admin interface:
+   * Optionally, create a superuser account to access the Django admin interface:
+
      ```
      python manage.py createsuperuser
      ```
 
 9. **Run the Development Server:**
-   - Start the Django development server to run the project locally:
+   * Start the Django development server to run the project locally:
+
      ```
      python manage.py runserver
      ```
 
 10. **Access the Project:**
-    - Once the server is running, access the project in your web browser at:
+    * Once the server is running, access the project in your web browser at:
+
       ```
       http://localhost:8000/
       ```
 
+<br>
+
 ## Usage
 
 1. **Viewing Blog Posts:**
-   - Upon accessing the deployed site, users can browse through the list of blog posts displayed on the main page.
-   - Click on a post title to view its full content.
+   * Upon accessing the deployed site, users can browse through the list of blog posts displayed on the main page.
+   * Click on a post title to view its full content.
 
 2. **Commenting on Posts:**
-   - To leave a comment on a post, users need to register an account and log in.
-   - Once logged in, users can navigate to the desired blog post and submit their comments via the provided form.
+   * To leave a comment on a post, users need to register an account and log in.
+   * Once logged in, users can navigate to the desired blog post and submit their comments via the provided form.
 
 3. **Managing Blog Content (Admin Users Only):**
-   - Admin users have additional privileges to manage blog content, including creating, updating, and deleting posts.
-   - To access admin functionalities, log in with admin credentials and navigate to the admin dashboard.
-   - From the dashboard, admin users can perform various actions such as creating new posts, editing existing ones, and managing user comments.
+   * Admin users have additional privileges to manage blog content, including creating, updating, and deleting posts.
+   * To access admin functionalities, log in with admin credentials and navigate to the admin dashboard.
+   * From the dashboard, admin users can perform various actions such as creating new posts, editing existing ones, and managing user comments.
 
 4. **Drafting Blog Posts:**
-   - Admin users can also save draft posts for future editing and publishing.
-   - To create a draft post, navigate to the post creation page and select the "Save Draft" option instead of publishing immediately.
+   * Admin users can also save draft posts for future editing and publishing.
+   * To create a draft post, navigate to the post creation page and select the "Save Draft" option instead of publishing immediately.
 
 5. **Approving/Disapproving Comments:**
-   - Admin users can review and moderate comments left by site users.
-   - Comments can be approved or disapproved based on their content and relevance to the blog post.
+   * Admin users can review and moderate comments left by site users.
+   * Comments can be approved or disapproved based on their content and relevance to the blog post.
 
 6. **Collaboration Requests:**
-   - Users interested in collaboration opportunities can submit requests via the contact form provided on the site.
-   - Upon submission, collaboration requests are stored in the database for review by admin users.
+   * Users interested in collaboration opportunities can submit requests via the contact form provided on the site.
+   * Upon submission, collaboration requests are stored in the database for review by admin users.
 
 7. **Pagination:**
-   - To navigate through multiple blog posts efficiently, pagination is implemented, allowing users to browse through a paginated list of posts.
-   - Pagination controls are available at the bottom of the main page to navigate between pages.
+   * To navigate through multiple blog posts efficiently, pagination is implemented, allowing users to browse through a paginated list of posts.
+   * Pagination controls are available at the bottom of the main page to navigate between pages.
 
 8. **Accessibility Features:**
-   - The site includes accessibility features such as aria attributes and semantic HTML to ensure compatibility with assistive technologies like screen readers.
-   - Users with disabilities can navigate and interact with the site comfortably, ensuring a positive user experience for all.
+   * The site includes accessibility features such as aria attributes and semantic HTML to ensure compatibility with assistive technologies like screen readers.
+   * Users with disabilities can navigate and interact with the site comfortably, ensuring a positive user experience for all.
+
+<br>
 
 ## Testing
 
 This section provides information about the testing procedures and tools used in the project. For detailed instructions and examples, please refer to the project documentation.
-
-### Overview
-
-Testing is an essential aspect of ensuring the reliability and functionality of the project. By writing and running tests, I verify that each component behaves as expected and meets the specified requirements.
 
 ### Procedures
 
@@ -256,7 +280,9 @@ The testing procedures in this project involve:
 
 The project utilizes the following tools for testing:
 
-- **Django Test Framework**: Django provides a built-in testing framework that simplifies the process of writing and running tests for Django applications. It includes tools for creating test cases, assertions, and managing test databases.
+* **Django Test Framework**: Django provides a built-in testing framework that simplifies the process of writing and running tests for Django applications. It includes tools for creating test cases, assertions, and managing test databases.
+
+<br>
 
 ## Deployment
 
@@ -280,9 +306,9 @@ Follow the prompts to log in with your Heroku account credentials.
 
 Make sure your Django project is ready for deployment:
 
-- Ensure all necessary dependencies are listed in your `requirements.txt` file.
-- Confirm that your project is using a supported database for Heroku, such as PostgreSQL.
-- Adjust your project settings to handle static files and media files properly in production.
+* Ensure all necessary dependencies are listed in your `requirements.txt` file.
+* Confirm that your project is using a supported database for Heroku, such as PostgreSQL.
+* Adjust your project settings to handle static files and media files properly in production.
 
 ### Step 5: Initialize Git repository and commit changes
 
@@ -353,7 +379,9 @@ This will open your app in a web browser, allowing you to verify that it's runni
 
 Congratulations! You've successfully deployed your Django project to Heroku. You can now share the URL of your deployed app with others.
 
+<br>
+
 ## Credits
 
-- [Niel McEwen](https://github.com/NielMc)
-- [Matt Rudge](https://github.com/lechien73)
+* [Niel McEwen](https://github.com/NielMc)
+* [Matt Rudge](https://github.com/lechien73)
