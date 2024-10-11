@@ -36,7 +36,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
     "127.0.0.1",
-    "yoseph.dev",
+    "blog.yoseph.dev",
     ".herokuapp.com",
     "localhost",
 ]
