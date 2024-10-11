@@ -36,9 +36,12 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
     "127.0.0.1",
-    "blog.yoseph.dev",
-    ".herokuapp.com",
     "localhost",
+    "blog.yoseph.dev",
+    "www.blog.yoseph.dev",  
+    "yoseph.dev",  
+    "www.yoseph.dev",  
+    ".herokuapp.com",  
 ]
 
 
@@ -163,9 +166,10 @@ STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-CSRF_TRUSTED_ORIGINS = [
-    "https://*.gitpod.io",
+CSRF_TRUSTED_ORIGINS = [    
     "https://*.herokuapp.com",
     "https://blog.yoseph.dev",  
+    "https://yoseph.dev",  
+    "https://www.yoseph.dev",  
 ]
 
