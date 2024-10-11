@@ -36,7 +36,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
     "127.0.0.1",
-    "8000-yosephdev-djangoblog-dze6izeu23k.ws-eu110.gitpod.io",
+    "yoseph.dev",
     ".herokuapp.com",
     "localhost",
 ]
