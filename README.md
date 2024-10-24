@@ -1,11 +1,11 @@
 
-# CodeStar Django Blog
+# DevDiaries Blog
 
 ![Desktop Overview](mockup-codestar.png)
 
-Welcome to CodeStar, a full-featured Django blog application designed to showcase various aspects of web development, including database-backed projects, deployment to Heroku, hosting uploaded images on a Cloud provider, creating function-based views, utilizing Django generic views, adding authentication, creating custom models, and adding interactivity using JavaScript.
+Welcome to DevDiaries, a full-featured Django blog application designed to showcase various aspects of web development, including database-backed projects, deployment to Heroku, hosting uploaded images on a Cloud provider, creating function-based views, utilizing Django generic views, adding authentication, creating custom models, and adding interactivity using JavaScript.
 
-[Live link to CodeStar](https://code-ninja-6985a427438a.herokuapp.com/)
+[Live link to DevDiaries](https://code-ninja-6985a427438a.herokuapp.com/)
 
 <br>
 
