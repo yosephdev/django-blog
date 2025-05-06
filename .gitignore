@@ -51,6 +51,7 @@ ipython_config.py
 # pyenv
 .python-version
 venv
+.env
 
 # pipenv
 .Pipfile.lock
