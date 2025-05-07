@@ -1,4 +1,5 @@
 from . import views
+from .views import auto_create_post
 from django.urls import path
 
 urlpatterns = [
@@ -14,4 +15,5 @@ urlpatterns = [
         views.comment_delete,
         name="comment_delete",
     ),
+    path('api/auto-create-post/', auto_create_post, name='auto_create_post'),
 ]
