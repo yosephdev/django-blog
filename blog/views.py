@@ -11,6 +11,8 @@ from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 from django.conf import settings
 from django.contrib.auth.models import User
+from django.utils.text import slugify
+import uuid
 
 
 # Create your views here.
@@ -152,6 +154,14 @@ def auto_create_post(request):
         if not title or not content:
             return Response({"error": "Title and content are required."}, status=400)
 
+        # Generate a unique slug
+        base_slug = slugify(title)
+        slug = base_slug
+        counter = 1
+        while Post.objects.filter(slug=slug).exists():
+            slug = f"{base_slug}-{counter}"
+            counter += 1
+
         # Get or create the default author
         try:
             default_author = User.objects.get(username='auto-publisher')
@@ -168,7 +178,8 @@ def auto_create_post(request):
             content=content,
             excerpt=excerpt,
             status=status,
-            author=default_author,            
+            author=default_author,
+            slug=slug,
         )
         
         return Response({
