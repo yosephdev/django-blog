@@ -23,11 +23,13 @@ defusedxml==0.7.1
 distro==1.7.0
 dj-database-url==0.5.0
 dj3-cloudinary-storage==0.0.6
-Django==4.2.11
-django-allauth==0.57.2
+Django==5.2
+django-allauth==65.7.0
+django-cors-headers==4.7.0
 django-crispy-forms==2.4
 django-crontab==0.7.1
 django-summernote==0.8.20.0
+djangorestframework==3.16.0
 dnspython==2.5.0
 docopt==0.6.2
 dotenv==0.9.9
