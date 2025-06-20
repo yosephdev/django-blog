@@ -204,4 +204,4 @@ MESSAGE_TAGS = {
 }
 
 # API Key (for Pipedream integration)
-DJANGO_API_KEY = os.environ.get("DJANGO_API_KEY", "LofN8lzK_HM9gcmxuGShJfQ_WXFr5kc2NBJN5Az2cmY")
+DJANGO_API_KEY = os.environ.get("DJANGO_API_KEY")
